@@ -1,0 +1,21 @@
+{
+  "name": "contactsApp",
+  "private": true,
+  "dependencies": {
+    "angular": "^1.5.8",
+    "materialize": "^0.97.7"
+  },
+  "devDependencies": {},
+  "overrides": {
+    "material-design-icons": {
+      "main": [
+        "iconfont/material-icons.css",
+        "iconfont/MaterialIcons-Regular.eot",
+        "iconfont/MaterialIcons-Regular.svg",
+        "iconfont/MaterialIcons-Regular.ttf",
+        "iconfont/MaterialIcons-Regular.woff",
+        "iconfont/MaterialIcons-Regular.woff2"
+      ]
+    }
+  }
+}
