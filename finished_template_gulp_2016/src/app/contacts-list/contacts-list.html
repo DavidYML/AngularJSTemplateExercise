@@ -1,0 +1,27 @@
+<div>
+    <h2>{{:: clc.title}}</h2>
+    <div class="row">
+        <button class="btn waves-effect" ng-click="clc.toggleList()" ng-class="clc.showList ? 'green' : 'red'"> Toggle
+            List
+        </button>
+
+        <ul class="collection" ng-if="clc.showList">
+
+            <li class="collection-item avatar" ng-repeat="contact in clc.contacts">
+                <img ng-src="{{contact.picture.thumbnail}}" class="circle"/>
+                <p>{{$index + 1}} {{contact.name.first}} {{contact.name.last}} <br/> {{contact.email}}
+                    <a href="#contacts-details/{{$index}}" class="secondary-content"><i class="material-icons">send</i></a>
+                </p>
+
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="fixed-action-btn" style="bottom:45px;right:24px" >
+        <a href="#contacts-add" class="btn-floating btn-large green" >
+            <i class="large material-icons">add</i>
+        </a>
+    </div>
+
+</div>

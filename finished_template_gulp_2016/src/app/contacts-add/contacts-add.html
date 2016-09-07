@@ -1,0 +1,24 @@
+<div>
+    <h1>{{:: clc.title}}</h1>
+    <p>{{addForm.$error}}</p>
+    <!-- One time binding: word maar een keer aan begin van oproep gebind, daarna niet meer (bij static waarden) -->
+    <div class="row">
+        <form class ="col s12" name="addForm" ng-submit="cac.addContact()" novalidate>
+            <div class="row">
+                <div class="input-field col s12" >
+                    <input id="firstname" name = "firstname" ng_model="cac.newContact.firstName" type="text"  ng-minlength="2" required />
+                    <label for="firstname">First Name </label>
+                </div>
+                <div class="input-field col s12" >
+                    <input id="lastname" name = "lastname" ng_model="cac.newContact.lastName" type="text" ng-minlength="2" required />
+                    <label for="lastname">Last Name </label>
+                </div>
+                <div class="input-field col s12" >
+                    <input id="email" name = "email" ng_model="cac.newContact.email" type="email"  required />
+                    <label for="email">Email</label>
+                </div>
+            </div>
+            <button ng-disabled="addForm.$invalid" ng-class="{ 'disabled': addForm.$invalid }" class ="btn btn-waves effect" type="submit" >Add Contact</button>
+        </form>
+    </div>
+</div>
