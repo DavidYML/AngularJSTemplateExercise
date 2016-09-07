@@ -3,10 +3,13 @@
  */
 var contactsApp = angular.module('contactsApp', ['contactsApp.core']);
 
-contactsApp.config(function() {
-    console.log('app - config');
+contactsApp.config(function(appVersion) {
+    console.log('app - config ' + appVersion);
 });
 
 contactsApp.run(function() {
     console.log('app - run');
 });
+
+
+contactsApp.constant('appVersion','0.2.0')
